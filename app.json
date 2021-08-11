@@ -4,6 +4,7 @@
     "slug": "webflix",
     "version": "1.0.0",
     "orientation": "portrait",
+    "userInterfaceStyle": "dark",
     "icon": "./app/assets/iconweb.png",
     "splash": {
       "image": "./app/assets/splashweb.png",

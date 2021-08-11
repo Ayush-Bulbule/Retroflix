@@ -1,9 +1,10 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Image, Text, View } from 'react-native'
 import Button from "../components/Button"
+import routes from '../navigation/routes'
 import colors from '../config/colors'
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
     return (
         <ImageBackground
             blurRadius={5}
@@ -11,16 +12,18 @@ const WelcomeScreen = () => {
             source={require("../assets/webbg.png")}>
             <View style={styles.logoContainer}>
                 <Image style={styles.logo} source={require("../assets/adaptive-iconweb.png")} />
-                <Text style={styles.tagline}>Watch Webseries on the go!</Text>
+                <Text style={styles.tagline}>Watch the golden on the go!</Text>
             </View>
             <View style={styles.buttonsContainer}>
                 <Button
                     title="Login"
                     style={styles.login}
+                    onPress={() => navigation.navigate(routes.LOGIN)}
                 />
                 <Button
                     title="SignUp"
                     color="black"
+                    onPress={() => navigation.navigate(routes.REGISTER)}
                 />
             </View>
 
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
 })
 
 /*
-onPress={() => navigation.navigate(routes.LOGIN)}
+
 onPress={() => navigation.navigate(routes.REGISTER)}
 
  */
